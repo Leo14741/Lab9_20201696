@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<div class="container" data-layout="container">
+    <h1> Juego de personajes movedizos</h1>
+    <label>Ingrese el número de personajes</label><input id=personajes type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+    <label>Ingrese el tamaño de las pistas (m):</label><input id=tamano type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+    <br>
+    <button id="formu" type="submit" class="btn btn-primary">Iniciar Juego</button>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#formu").click(function (event) {
+            event.preventDefault();
+            var personajes = $("#personajes").val();
+            var tamano = $("#tamano").val();
+
+            if ((personajes >=3) && (personajes <=5) && (tamano >=4) && (tamano <=8)) {
+                for(var i = 0; i < personajes; i++){
+                $("body").append('<img width="10%" src="../static/robot.png" ><br><input id=personaje><script <button>Seleccionar Personaje</button><br>' +
+                    '<button>Iniciar Juego</button>');}
+                return;
+            } else {
+                alert("Ingreso(s) inválidos");
+                $(".invalid-feedback").show(500).delay(1000).hide(500);
+            }
+        });
+
+    });
+</script>
+</body>
+</html>
