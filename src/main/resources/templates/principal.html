@@ -27,8 +27,11 @@
 
             if ((personajes >=3) && (personajes <=5) && (tamano >=4) && (tamano <=8)) {
                 for(var i = 0; i < personajes; i++){
-                $("body").append('<img width="10%" src="../static/robot.png" ><br><input id=personaje><script <button>Seleccionar Personaje</button><br>' +
-                    '<button>Iniciar Juego</button>');}
+                    var j=0
+                $("body").append('<div id=color class="container" data-layout="container"><img width="10%" src="../static/robot.png" ><br><input id=i> <button id="seleccion">Seleccionar Personaje</button><br></div>' +
+                    '');
+                }
+                $("body").append('<button>Iniciar Juego</button>')
                 return;
             } else {
                 alert("Ingreso(s) inválidos");
@@ -38,5 +41,6 @@
 
     });
 </script>
+<script src="../static/Selecccion.js"></script>
 </body>
 </html>
